@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class CogmentoLogin {
-    public  static void main(String[]args){
+    public  static void main(String[]args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://ui.cogmento.com/");
@@ -29,13 +29,8 @@ public class CogmentoLogin {
         addDetails.click();
         WebElement name = driver.findElement(By.xpath("(//input[@autocomplete='new-password'])[1]"));
         name.sendKeys("sravya");
-        //driver.findElement(By.xpath("//label[text()='Phone']/following-sibling::div//div[@role='listbox']")).click();
-       driver.findElement(By.xpath("//label[normalize-space()='Phone']")).click();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("document.body.style.zoom='0.67'");
-        driver.findElement(By.xpath("//label[text()='Phone']/following-sibling::div//i[@class='dropdown icon']")).click();
-        //driver.findElement(By.xpath("//div[@name='hint']//input[@type='text']")).click();
-       driver.findElement(By.xpath("//div[contains(text(),'India')]")).click();
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//label[text()='Source']/parent::div/div[@role='listbox']")).click();
         
 
 
