@@ -36,7 +36,7 @@ public class CogmentoLogin {
         driver.findElement(By.xpath("//label[text()='Phone']/following-sibling::div//i[@class='dropdown icon']")).click();
         //driver.findElement(By.xpath("//div[@name='hint']//input[@type='text']")).click();
        driver.findElement(By.xpath("//div[contains(text(),'India')]")).click();
-        
+        //123
 
 
 
